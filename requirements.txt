@@ -3,3 +3,4 @@ gunicorn
 google-cloud-storage
 pytz
 requests
+google-cloud-secret-manager

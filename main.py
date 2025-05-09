@@ -9,8 +9,11 @@ from datetime import datetime
 import pytz
 
 app = Flask(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s"
+)
 logger = logging.getLogger()
-logger.setLevel(logging.INFO)
 
 storage_client = storage.Client()
 BUCKET_NAME = os.environ.get("SNAPSHOT_BUCKET", "ml-orders-snapshots")
