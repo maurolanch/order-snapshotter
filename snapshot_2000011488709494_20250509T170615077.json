@@ -1,0 +1,147 @@
+{
+    "id": 2000011488709494,
+    "date_created": "2025-05-02T20:56:35.000-04:00",
+    "last_updated": "2025-05-09T16:37:25.000-04:00",
+    "date_closed": "2025-05-02T20:57:44.000-04:00",
+    "pack_id": null,
+    "fulfilled": true,
+    "buying_mode": "buy_equals_pay",
+    "shipping_cost": null,
+    "mediations": [],
+    "total_amount": 152439.0,
+    "paid_amount": 152439.0,
+    "order_items": [
+        {
+            "item": {
+                "id": "MCO1475172933",
+                "title": "Correa Pulso Estuche | Para Apple Watch Ultra 2 / 1 | Tama\u00f1o 49mm | Spigen Rugged Armor Pro | Color Azul | Protecci\u00f3n De Grado Militar | Hebilla Met\u00e1lica",
+                "category_id": "MCO434353",
+                "variation_id": null,
+                "seller_custom_field": null,
+                "variation_attributes": [],
+                "warranty": "Garant\u00eda del vendedor: 3 meses",
+                "condition": "new",
+                "seller_sku": "ACS07389",
+                "global_price": null,
+                "net_weight": null,
+                "user_product_id": "MCOU2498110457",
+                "release_date": null
+            },
+            "quantity": 1,
+            "requested_quantity": {
+                "measure": "unit",
+                "value": 1
+            },
+            "picked_quantity": null,
+            "unit_price": 152439.0,
+            "full_unit_price": 249900.0,
+            "full_unit_price_currency_id": "COP",
+            "currency_id": "COP",
+            "manufacturing_days": null,
+            "sale_fee": 27439.0,
+            "listing_type_id": "gold_special",
+            "base_exchange_rate": null,
+            "base_currency_id": null,
+            "element_id": null,
+            "discounts": null,
+            "bundle": null,
+            "compat_id": null,
+            "stock": {
+                "store_id": null,
+                "node_id": "COCU02"
+            },
+            "kit_instance_id": null
+        }
+    ],
+    "currency_id": "COP",
+    "payments": [
+        {
+            "id": 110240582294,
+            "order_id": 2000011488709494,
+            "payer_id": 148406317,
+            "collector": {
+                "id": 287078901
+            },
+            "card_id": null,
+            "reason": "Correa Pulso Estuche | Para Apple Watch Ultra 2 / 1 | Tama\u00f1o 49mm | Spigen Rugged Armor Pro | Color Azul | Protecci\u00f3n De Grado Militar | Hebilla Met\u00e1lica",
+            "site_id": "MCO",
+            "payment_method_id": "pse",
+            "currency_id": "COP",
+            "installments": 1,
+            "issuer_id": "1037",
+            "atm_transfer_reference": {
+                "transaction_id": null,
+                "company_id": "1551"
+            },
+            "coupon_id": null,
+            "activation_uri": "https://www.mercadolibre.com.co/payments/110240582294/bank_transfer?caller_id=148406317&hash=239263e6-420f-457b-9025-0c88188ac1cd",
+            "operation_type": "regular_payment",
+            "payment_type": "bank_transfer",
+            "available_actions": [
+                "refund"
+            ],
+            "status": "approved",
+            "status_code": null,
+            "status_detail": "accredited",
+            "transaction_amount": 152439.0,
+            "transaction_amount_refunded": 0.0,
+            "taxes_amount": 0.0,
+            "shipping_cost": 0.0,
+            "coupon_amount": 0.0,
+            "overpaid_amount": 0.0,
+            "total_paid_amount": 152439.0,
+            "installment_amount": null,
+            "deferred_period": null,
+            "date_approved": "2025-05-02T20:57:44.000-04:00",
+            "transaction_order_id": null,
+            "date_created": "2025-05-02T20:56:36.000-04:00",
+            "date_last_modified": "2025-05-09T16:37:24.000-04:00",
+            "marketplace_fee": 27439.0,
+            "reference_id": null,
+            "authorization_code": null
+        }
+    ],
+    "shipping": {
+        "id": 44810780415
+    },
+    "status": "paid",
+    "status_detail": null,
+    "tags": [
+        "order_has_discount",
+        "catalog",
+        "paid",
+        "delivered"
+    ],
+    "internal_tags": [],
+    "feedback": {
+        "seller": null,
+        "buyer": null
+    },
+    "context": {
+        "channel": "marketplace",
+        "site": "MCO",
+        "flows": [
+            "catalog"
+        ]
+    },
+    "seller": {
+        "id": 287078901
+    },
+    "buyer": {
+        "id": 148406317,
+        "nickname": "VAFE4273524",
+        "first_name": "Luis Hernando",
+        "last_name": "Valencia Bermudez"
+    },
+    "taxes": {
+        "amount": null,
+        "currency_id": null,
+        "id": null
+    },
+    "cancel_detail": null,
+    "manufacturing_ending_date": null,
+    "order_request": {
+        "change": null,
+        "return": null
+    }
+}

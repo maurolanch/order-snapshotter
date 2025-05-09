@@ -53,7 +53,7 @@ def handle_pubsub():
     try:
         bucket = storage_client.bucket(BUCKET_NAME)
         blob = bucket.blob(path)
-        blob.upload_from_string(json.dumps(snapshot), content_type="application/json")
+        blob.upload_from_string(json.dumps(snapshot, ensure_ascii=False), content_type="application/json")
         logger.info(f"Snapshot guardado en {path}")
     except Exception as e:
         logger.error(f"Error al subir snapshot: {e}")
