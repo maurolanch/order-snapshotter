@@ -30,13 +30,18 @@ def handle_pubsub():
     try:
         data = base64.b64decode(envelope["message"]["data"]).decode("utf-8")
         webhook = json.loads(data)
-        order_id = webhook["resource"].split("/")[-1]
-        logger.info(f"Procesando snapshot para order_id: {order_id}")
     except Exception as e:
-        logger.error(f"Error parsing Pub/Sub message: {e}")
+        logger.error(f"Error decoding Pub/Sub message: {e}")
         return "Bad Request", 400
 
+    resource = webhook.get("resource", "")
+    if not resource.startswith("/orders/"):
+        logger.warning(f"Mensaje no procesable: resource={resource}")
+        return "Ignored", 200
+
     try:
+        order_id = resource.split("/")[-1]
+        logger.info(f"Procesando snapshot para order_id: {order_id}")
         snapshot = get_order_snapshot(order_id)
     except Exception as e:
         logger.error(f"Error al obtener snapshot: {e}")
@@ -60,7 +65,6 @@ def handle_pubsub():
         return "Storage Error", 500
 
     return "OK", 200
-
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
