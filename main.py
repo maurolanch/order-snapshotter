@@ -35,13 +35,19 @@ def handle_pubsub():
         return "Bad Request", 400
 
     resource = webhook.get("resource", "")
+    topic = webhook.get("topic", "")
+
+    if topic == "orders_feedback" or resource.endswith("/feedback"):
+        logger.info(f"Ignoring feedback messages: topic={topic}, resource={resource}")
+        return "Ignored", 200
+
     if not resource.startswith("/orders/"):
-        logger.warning(f"Mensaje no procesable: resource={resource}")
+        logger.warning(f"Message not processable: resource={resource}")
         return "Ignored", 200
 
     try:
         order_id = resource.split("/")[-1]
-        logger.info(f"Procesando snapshot para order_id: {order_id}")
+        logger.info(f"Processing snapshot for order_id: {order_id}")
         snapshot = get_order_snapshot(order_id)
     except Exception as e:
         logger.error(f"Error al obtener snapshot: {e}")
